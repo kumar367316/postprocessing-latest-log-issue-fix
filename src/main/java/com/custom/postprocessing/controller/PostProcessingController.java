@@ -18,14 +18,14 @@ public class PostProcessingController {
     private PostProcessingScheduler postProcessingScheduler;
 
     @GetMapping(path = "/postprocessor")
-    public @ResponseBody String manualPostProcessBatch() {
+    public void manualPostProcessBatch() {
 
-        return postProcessingScheduler.smartComPostProcessing();
+        postProcessingScheduler.smartComPostProcessing();
     }
     
     @GetMapping(path = "/archive")
-    public @ResponseBody String  manualManualArchive() {
+    public void manualManualArchive() {
 
-        return postProcessingScheduler.archivePostProcessing();
+        postProcessingScheduler.archivePostProcessing();
     }
 }
